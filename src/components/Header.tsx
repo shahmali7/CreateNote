@@ -1,8 +1,10 @@
 import React from 'react'
-import '../styles/Header.css'
+// import '../styles/Header.css'
+import {StyledHeader} from '../styledComp/Header.styles'
+
 const Header: React.FC = () => {
   return (
-    <div className='Header'><h1>React & TypeScript</h1> </div>
+    <StyledHeader > <h1>React & TypeScript</h1> </StyledHeader>
   )
 }
 

@@ -3,8 +3,8 @@ import CreateNote from "./components/CreateNote";
 import Header from "./components/Header";
 import NodeList from "./components/NodeList";
 import { NoteInterface } from "./model/interface";
-import './styles/App.css'
-
+import {Container} from './styledComp/Container'
+import { GlobalStyles } from "./styledComp/GlobalStyles";
 function App() {
 
   const [notes,setNotes]=useState<NoteInterface[]>([{
@@ -17,13 +17,16 @@ function App() {
 
   }])
 
-
+  
   return (
-    <div className="App">
+    
+    <Container >
+      <GlobalStyles/>
       <Header/>
-      <NodeList notes={notes} setNotes={setNotes}/>
       <CreateNote notes={notes} setNotes={setNotes}/>
-    </div>
+      <NodeList notes={notes} setNotes={setNotes}/>
+    </Container>
+ 
   );
 }
 

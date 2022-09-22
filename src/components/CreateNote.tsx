@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react'
 import { NoteInterface } from '../model/interface'
+import { CreateNoteStyle, DIV, Form, Input,ButtonAdd } from '../styledComp/CreateNote'
 
 interface CreateNoteI{
     notes : NoteInterface[],
@@ -34,18 +35,24 @@ const CreateNote:React.FC<CreateNoteI> = ({notes,setNotes}) => {
     }
 
   return (
-    <div>
+    <CreateNoteStyle>
         <h2>Create Note</h2>
-        <form onSubmit={(e)=>handleSubmit(e)}>
+        <Form onSubmit={(e)=>handleSubmit(e)}>
+          <DIV>
             <label>Title</label>
-            <input placeholder='Title ...' type='text' ref={titleRef}/>
-            <label>Text</label>
-            <input placeholder='Text ...' type='text' ref={textRef}/>
-            <label>Choose color</label>
-            <input type='color' defaultValue='#ffffff' ref={colorRef}/>
-            <button type='submit' >Submit</button>
-        </form>
-    </div>
+            <Input placeholder='Title ...' type='text' ref={titleRef}/>
+          </DIV>
+          <DIV>
+          <label>Text</label>
+            <Input placeholder='Text ...' type='text' ref={textRef}/>
+          </DIV>
+          <DIV>
+          <label>Choose color</label>
+            <Input type='color' defaultValue='#ffffff' ref={colorRef}/>
+          </DIV>
+            <ButtonAdd type='submit' >Submit</ButtonAdd>
+        </Form>
+    </CreateNoteStyle>
   )
 }
 
