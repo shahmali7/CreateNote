@@ -9,7 +9,6 @@ export const GlobalStyles=createGlobalStyle`
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        height: 100vh;
     }
     h1,h3{
         font-family: 'Roboto Condensed';

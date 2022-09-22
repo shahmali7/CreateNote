@@ -5,6 +5,12 @@ export const Form=styled.form`
     display: flex;
     justify-content: space-evenly;
     margin-top: 20px;
+    @media (max-width: 670px){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 `
 
 export const CreateNoteStyle=styled.div`
@@ -20,11 +26,19 @@ export const CreateNoteStyle=styled.div`
     margin-top: 15px;
     margin-left: 5%;
     background-color: rgba(0,0,0,0.5);
+    @media (max-width: 670px){
+        width: 85%;
+        height: auto;
+        padding: 20px;
+    }
 `
 export const DIV=styled.div`
     display: flex;
     flex-direction: column;
     gap: 15px;
+    @media (max-width: 670px){
+        margin-top:5px
+    }
 `
 
 export const Input=styled.input`

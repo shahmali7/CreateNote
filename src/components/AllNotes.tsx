@@ -13,7 +13,7 @@ const AllNotes:React.FC<iNote> = ({note,deleteNote}) => {
   }
   return (
     <ThemeProvider theme={theme}>
-      <NoteStyle className='Note'>
+      <NoteStyle >
         <SingleNote  >
              <h3>{note.title}</h3>
              <p>{note.text}</p>
