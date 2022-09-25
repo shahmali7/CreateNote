@@ -27,9 +27,12 @@ export const CreateNoteStyle=styled.div`
     margin-left: 5%;
     background-color: rgba(0,0,0,0.5);
     @media (max-width: 670px){
-        width: 85%;
+        width: 80%;
         height: auto;
         padding: 20px;
+    }
+    @media(max-width:340px){
+        width: 75%;
     }
 `
 export const DIV=styled.div`
